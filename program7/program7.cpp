@@ -1,3 +1,8 @@
+/*
+Max Scott
+
+*/
+
 //https://www.youtube.com/watch?v=DsS-ZiYOWy4
 //https://www.youtube.com/watch?v=2ybLD6_2gKM&t=373s
 
@@ -43,11 +48,38 @@ int main(){
         cout << *(values+i) << endl;
     }
 
-    //G)
-    //IDK ???? 
+    //G) 
     cout <<""<< endl;
-    cout <<""<< endl;
+    cout <<"using vPtr and its index"<< endl;
 
+    for(int i = 0; i < 5; i++){
+        cout << vPtr[i] << endl;
+    }
+
+    //H)
+    cout <<""<< endl;
+    cout <<"10 accesed difrent ways "<< endl;
+        //subscript notation 
+    cout << values[4] << endl;
+        //ptr offset with arr name 
+    cout << *(values + 4) << endl;
+        // ptr subscript nontation 
+    cout << vPtr[4] << endl; 
+        // ptr offset 
+    cout << *(vPtr + 4) << endl;
+
+    //I)
+    cout <<""<< endl;
+    cout << "the addres of vPtr + 3 is " << vPtr << endl;
+    cout << "the value at vPtr + 3 is " << *vPtr << endl;
+    cout << "the value at vPtr + 3 is " << *vPtr << endl;
+
+    //J)
+    cout <<""<< endl;
+    cout <<""<< endl;
+    vPtr = &values[4];
+    vPtr -= 4;
+    cout << *vPtr << endl;
 
     return 0; 
 }
