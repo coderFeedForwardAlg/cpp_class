@@ -7,8 +7,14 @@ Max Scott
 #include <iostream>
 using namespace std;
 
-int main(){
-    
+class Rational{
+    private:
+            // they are privet but thier are setters and getters for them 
 
-    return 0; 
+    public:
+        
+};
+
+int main(){
+    return 0;
 }
