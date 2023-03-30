@@ -3,25 +3,26 @@ Max Scott
 Feb 17 2023
 */
 #include <iostream>
-using namespace std; 
+using namespace std;
+#include <time.h> // for rand number 
 
 void setUp(){
     cout << "I have a nuber between 1 and 1000." << endl;
     cout << "Can you guess my number?" << endl;
     cout << "Please Type you first guess." << endl; 
 }
-int main(){
-        // randome need random seed that changes 
+
+
+void guessing(){
+         // randome need random seed that changes 
         // https://stackoverflow.com/questions/13500494/rand-generating-the-same-number
     srand(static_cast<int>(time(0)));
     int rightNumber = (rand() % 1000) + 1; 
     int guess = 0; 
-    char playAgain = ' '; 
+char playAgain = ' '; 
     int numGueses = 0; 
     setUp();
-
-    while(playAgain != 'n'){
-        numGueses++; 
+    numGueses++; 
         cin >> guess; 
         if(guess == rightNumber){
             if(numGueses < 10){
@@ -35,7 +36,7 @@ int main(){
             cout << "Would you like to play again (y or n)?" << endl;
             cin >> playAgain;
             if(playAgain == 'n'){
-                break;
+                //break;
             }else if(playAgain == 'y'){
                 srand(static_cast<int>(time(0)));
                 rightNumber = (rand() % 1000) + 1; 
@@ -49,12 +50,21 @@ int main(){
             cout << "To high" << endl;
         } else {
             cout << "Too low" << endl;
-        }   
+        } 
+    if(playAgain != 'n'){
+        guessing();
     }
+}
+int main(){
+   
+
+    guessing();
     
 
     return 0; 
 }
+
+
 
 // ******  sample output ******* // 
 
